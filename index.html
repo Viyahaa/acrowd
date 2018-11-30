@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Token & Crowdsale Constructor</title>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Token & Crowdsale Constructor</h1> <br>
+  <h3>Made in Truffle. ERC20 mintable Token & Crowdsale (OpenZeppelin inside).</h3>
+  <br><br>
+  <div>Deploy Token <span class="large">→</span> Deploy Crowdsale <span class="large">&#8594;</span> Add Minter <span class="large">&#8594;</span> Start Crowdsale</div>
+  <br>
+  <div id="tokenRow">
+    <h2>Token: </h2>
+    <br>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <div>Name Token: </div>
+            <input type="text" id="nameYouToken" class="input200" />
+          </td>
+          <td>
+            <div class="margin10">Symbol Token: </div>
+            <input type="text" id="symbolYouToken" class="input100"/>
+          </td>
+          <td>
+            <div class="margin10">Decimals: </div>
+            <input type="text" id="decimalsYouToken" class="input65"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button id="createToken" class="btn" onclick="App.depoloyToken()">Deploy Token</button>
+    <br><br>
+  </div>
+  <div id="crowdsaleRow">
+    <h2 class="gray">Crowdsale: </h2>
+    <br>
+    <div class="gray">Start day: <span class="gray dayformat">(mm/dd/year)&nbsp;&nbsp;&nbsp;&nbsp; hh:mm(am/pm)</span></div>
+    <input id="startDay" type="text" size="8" class="input100">
+    <input id="startTime" type="text" class="time"/>
+    <br><br>
+    <div class="gray">Finish date: <span class="gray dayformat">(mm/dd/year) hh:mm(am/pm)</span></div>
+    <input id="finishDate" type="text" size="8" class="input100">
+    <input id="finishTime" type="text" class="time"/>
+    <br><br>
+    <div class="gray">Token rate: </div>
+    <input type="text" id="tokenRate" class="input200"/>
+    <br><br>
+    <div class="gray">Address beneficiary: </div>
+    <input type="text" id="beneficiary" class="input400"/>
+    <br><br>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <div class="gray">Soft cap tokens: </div>
+            <input type="text" id="softdCap" class="input200"/>
+          </td>
+          <td>
+            <div class="gray margin10">Hard cap tokens: </div>
+            <input type="text" id="hardCap" class="input200"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button id="createCrowdsale" class="btngray" onclick="App.depoloyCrowdsale()">Deploy Crowdsale & Add Minter</button>
+    <br><br>
+  </div>
+  <h2 class="gray2">Start Crowdsale: </h2>
+  <br>
+  <div class="gray2">Amount: </div>
+  <input type="text" id="amountEth" class="input200"/>
+  <button id="buyTokens" class="btngray2" onclick="App.buyTokens()">Buy tokens</button>
+  <br><br>
+  <button id="checkStatus" class="btngray2" onclick="App.checkStatus()">Check status</button>
+  <button id="finalized" class="btngray2" onclick="App.finalizedCrowdsale()">Complete the Crowdsale</button>
+  <br><br>
+  <div>Contract code:</div>
+  <br>
+  <span>Token: </span><a href="https://github.com/yvital/ContractCode/blob/master/Code/MyToken.sol" target="_blank">https://github.com/yvital ... MyToken.sol</a>
+  <br><br>
+  <span>Crowdsale: </span><a href="https://github.com/yvital/ContractCode/blob/master/Code/MyCrowdsale.sol" target="_blank">https://github.com/yvital ... MyCrowdsale.sol</a>
+
+</body>
+</html>
